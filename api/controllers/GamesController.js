@@ -16,8 +16,8 @@
  */
 
 module.exports = {
-
   create: function(req, res) {
+    console.log("creating game");
     Game.create(req.param('game')).done(function(err, game){
       if (err) {
         return console.log(err);
@@ -28,13 +28,20 @@ module.exports = {
   },
 
   show: function (req, res) {
-    Game.findOne(req.param('id')).done(function(err, game) {
+    console.log("showing game");
+    Game.findOneByUuid(req.param('id')).done(function(err, game) {
       if (err) return res.send(err,500);
       if (!game) return res.send("Game not found", 404);
-      res.json(game);
+
+      // Find all the players in this game
+      Player.find({
+        game_id: game.id
+      }).done(function(err, players) {
+        if (err) return res.send(err,500);
+        res.json({game: game, players: players});
+      });
     });
   },
-
 
   _config: {}
 

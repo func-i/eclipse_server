@@ -22,8 +22,28 @@ module.exports = {
    *    `/players/create`
    */
    create: function (req, res) {
+    var game = Game.findOneByUuid(req.param('game_id')).done(function(err, game){
+      if (err) return res.send(err,500);
+      if (!game) return res.send("Game not found", 404);
+
+      playerParams = req.param('player');
+      playerParams.game_id = game.id;
+
+      console.log(playerParams);
+      Player.create(playerParams).done(function(err, player){
+        if (err) {
+          return console.log(err);
+        } else {
+          res.json(player);
+        }
+      });
+    });
+  },
+
+  update: function (req, res) {
+    console.log("updating player");
     var game = Game.findOne(req.param('game_id')).done(function(err, game){
-      Player.create(req.param('player')).done(function(err, player){
+      Player.update({id: req.param('id')}, req.param('player')).done(function(err, player){
         if (err) {
           return console.log(err);
         } else {

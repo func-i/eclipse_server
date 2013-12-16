@@ -11,6 +11,7 @@ module.exports = {
   attributes: {
     name: 'string',
     race: 'string',
-    ships: 'json'
+    ships: 'json',
+    game_id: 'integer'
   }
 };
