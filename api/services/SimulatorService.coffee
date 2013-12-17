@@ -108,7 +108,7 @@ nextAttackingShip = () ->
 
 shipAttackOpponent = (attackingShip, priority) ->
 
-  console.log "Attacking Ship: #{attackingShip.shipName} by #{attackingShip.playerType}"
+  #onsole.log "Attacking Ship: #{attackingShip.shipName} by #{attackingShip.playerType}"
 
   attackingShip.timesRolled += 1
 
@@ -130,7 +130,7 @@ shipAttackOpponent = (attackingShip, priority) ->
     [attackingShipPriority.indexOf(oS.shipName), oS.health - oS.damage]).value()
 
   if attackingShip.missiles.length > 0
-    console.log "Attacking with Missiles"
+    #console.log "Attacking with Missiles"
     # This ship still has missles and hasn't fired them
     # Fire them now!
     weapons = attackingShip.missiles
@@ -139,7 +139,7 @@ shipAttackOpponent = (attackingShip, priority) ->
     currentBattleShips[currentBattleShips.indexOf(attackingShip)].missiles = []
     currentBattleShips[currentBattleShips.indexOf(attackingShip)].timesRolled = 0
   else
-    console.log "Attacking with cannons"
+    #console.log "Attacking with cannons"
     # This ship only has cannons to fire
     # Fire them now
     weapons = attackingShip.cannons
@@ -148,7 +148,7 @@ shipAttackOpponent = (attackingShip, priority) ->
     # There are weapons to fire!
      for weapon in weapons
       roll = Math.floor(Math.random() * 6) + 1
-      console.log "Roll: #{roll}"
+      #console.log "Roll: #{roll}"
 
       # Find the next ship to attack
       targetShip = opponentShips[0]
