@@ -1,5 +1,5 @@
 /**
- * PlayersController
+ * SimulationsController
  *
  * @module      :: Controller
  * @description	:: A set of functions called `actions`.
@@ -17,44 +17,27 @@
 
 module.exports = {
 
+
   /**
    * Action blueprints:
-   *    `/players/create`
+   *    `/simulations/create`
    */
    create: function (req, res) {
+
     Game.findOneByUuid(req.param('game_id')).done(function(err, game){
       if (err) return res.send(err,500);
       if (!game) return res.send("Game not found", 404);
-
-      playerParams = req.param('player');
-      playerParams.game_id = game.id;
-
-      Player.create(playerParams).done(function(err, player){
-        if (err) {
-          return console.log(err);
-        } else {
-          res.json(player);
-        }
-      });
+      results = SimulatorService.simulateBattle(req.param('battle_object'));
+      res.json(results);
     });
   },
 
-  update: function (req, res) {
-    Game.findOne(req.param('game_id')).done(function(err, game){
-      Player.update({id: req.param('id')}, req.param('player')).done(function(err, player){
-        if (err) {
-          return console.log(err);
-        } else {
-          res.json(player);
-        }
-      });
-    });
-  },
 
   /**
    * Overrides for the settings in `config/controllers.js`
-   * (specific to PlayersController)
+   * (specific to SimulationsController)
    */
   _config: {}
+
 
 };
