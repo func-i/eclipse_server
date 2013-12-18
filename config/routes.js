@@ -117,6 +117,11 @@ module.exports.routes = {
   'post /games/:game_id/simulations' : {
     controller    : 'simulations',
     action        : 'create'
+  },
+
+  'post /games/:game_id/simulations_test' : {
+    controller    : 'simulations',
+    action        : 'test'
   }
 };
 

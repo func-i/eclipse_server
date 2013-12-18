@@ -17,6 +17,9 @@ defenderPriorities = undefined
 attackerPriorities = undefined
 results = undefined
 
+# The number of times each simulation will be run
+numberOfSimulations = 20
+
 # The actual function which returns the permutations of an array-like
 # object (or a proper array).
 permute = (arr) ->
@@ -170,7 +173,7 @@ shipAttackOpponent = (attackingShip, priority) ->
 
       # PVP, use priority ship selected
       if roll isnt 1 && (roll is 6 || roll + attackingShip.computerTotal - targetShip.shieldTotal >= 6)
-        console.log "Hit"
+        #console.log "Hit"
 
         # Apply damage to ship
         targetShip.damage += weapon
@@ -186,7 +189,7 @@ simulatePriority = (priority) ->
   results[priority].attacker = 0
 
   # simulate the battle for this priority 10 times
-  for i in [1..50]
+  for i in [1..numberOfSimulations]
     #console.log " ======= NEW SIMULATION ======="
 
     # Reset all attributes
@@ -198,13 +201,40 @@ simulatePriority = (priority) ->
       currentBattleShips.push _.extend({}, bShip)
 
     # run 100 rolls for the turn to be resolved
-    for r in [1..50]
+    for r in [1..100]
       attackingShip = nextAttackingShip()
       shipAttackOpponent(attackingShip, priority)
       if roundWon(priority)
         # Reload the ships each time we test this case
         #console.log "Round Over, next simulation"
         break
+
+formatResults = (results) ->
+  # Number of
+  modifier = 100 / numberOfSimulations
+
+  defenderResult = {
+      priority: ""
+      wins: 0
+    }
+    attackerResult = {
+      priority: ""
+      wins: 0
+    }
+
+    for priority, rW of results
+      if rW.defender > defenderResult.wins
+        defenderResult.priority = priority
+        defenderResult.wins = rW.defender * modifier
+
+      if rW.attacker > attackerResult.wins
+        attackerResult.priority = priority
+        attackerResult.wins = rW.attacker * modifier
+
+  return {
+    defenderResult: defenderResult,
+    attackerResult: attackerResult
+  }
 
 start = () ->
   addDefenderShips()
@@ -228,7 +258,7 @@ start = () ->
   #console.log "Everything is done!"
   #console.log "RESULTS!"
   #console.log results
-  return results
+  return formatResults(results)
 
 arrayExcept = (arr, idx) ->
   res = arr[0..]

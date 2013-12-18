@@ -22,7 +22,7 @@ module.exports = {
    * Action blueprints:
    *    `/simulations/create`
    */
-   create: function (req, res) {
+  create: function (req, res) {
 
     Game.findOneByUuid(req.param('game_id')).done(function(err, game){
       if (err) return res.send(err,500);
@@ -31,6 +31,31 @@ module.exports = {
       res.json(results);
     });
   },
+
+  test: function (req, res) {
+    Game.findOneByUuid(req.param('game_id')).done(function(err, game){
+      Player.find({game_id: game.id}).done(function(err, players) {
+        player1 = players[0];
+        player2 = players[1];
+
+        battleObject = {
+          attacker : {
+            player : player1,
+            ships  : {"Interceptor" : 5, "Cruiser" : 4, "Dreadnaught": "2"}
+          },
+          defender : {
+            player : player2,
+            ships  : {"Interceptor" : 3, "Cruiser" : 2, "Dreadnaught": "1", "Starbase": 3}
+          }
+        };
+
+        results = SimulatorService.simulateBattle(battleObject);
+        res.json(results);
+
+      });
+    });
+  },
+
 
 
   /**
