@@ -12,6 +12,7 @@ module.exports = {
     name: 'string',
     race: 'string',
     ships: 'json',
-    game_id: 'integer'
+    game_id: 'integer',
+    uuid: 'string'
   }
 };

@@ -17,7 +17,6 @@
 
 module.exports = {
   create: function(req, res) {
-    console.log("creating game");
     Game.create(req.param('game')).done(function(err, game){
       if (err) {
         return console.log(err);
@@ -28,7 +27,6 @@ module.exports = {
   },
 
   show: function (req, res) {
-    console.log("showing game");
     Game.findOneByUuid(req.param('id')).done(function(err, game) {
       if (err) return res.send(err,500);
       if (!game) return res.send("Game not found", 404);
