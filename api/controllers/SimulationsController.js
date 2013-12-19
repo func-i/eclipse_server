@@ -41,11 +41,11 @@ module.exports = {
         battleObject = {
           attacker : {
             player : player1,
-            ships  : {"Interceptor" : 5, "Cruiser" : 4, "Dreadnaught": "2"}
+            ships  : {"Dreadnaught": "1"}
           },
           defender : {
             player : player2,
-            ships  : {"Interceptor" : 3, "Cruiser" : 2, "Dreadnaught": "1", "Starbase": 3}
+            ships  : {"Dreadnaught": "1"}
           }
         };
 
