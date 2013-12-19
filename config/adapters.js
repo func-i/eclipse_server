@@ -24,7 +24,7 @@ module.exports.adapters = {
     module: 'sails-disk'
   },
 
-  postgres: {
+  'db-core': {
     module   : 'sails-postgresql',
     host     : process.env.PG_HOSTNAME || 'localhost',
     port     : process.env.PG_PORT || 5432,
