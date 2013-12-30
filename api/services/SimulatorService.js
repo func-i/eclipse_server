@@ -87,6 +87,7 @@
       missiles: [],
       cannons: []
     };
+    console.log(battleObject);
     playerShipBluePrint = battleObject[playerType].player.ships[shipName];
     shipObj.initiativeTotal += playerShipBluePrint.shipInitiative;
     shipObj.computerTotal += playerShipBluePrint.computer;
@@ -174,9 +175,11 @@
       return s.playerType === 'attacker';
     });
     if (defenderShips.length === 0) {
+      console.log("Attacker wins the hex");
       results[priority].attacker += 1;
       return true;
     } else if (attackerShips.length === 0) {
+      console.log("Defender wins the hex");
       results[priority].defender += 1;
       return true;
     } else {
@@ -189,6 +192,7 @@
     s = _(currentBattleShips).multiSortBy(function(s) {
       return [s.timesRolled, !(s.missiles.length > 0), -s.initiativeTotal, -s.missiles.length, (s.playerType === 'defender' ? 0 : 1)];
     });
+    console.log("Next attacking ship", s.value()[0]);
     return s.value()[0];
   };
 
@@ -207,10 +211,12 @@
       return [attackingShipPriority.indexOf(oS.shipName), oS.health - oS.damage];
     })).value();
     if (attackingShip.missiles.length > 0) {
+      console.log("Attacking with Missiles");
       weapons = attackingShip.missiles;
       currentBattleShips[currentBattleShips.indexOf(attackingShip)].missiles = [];
       currentBattleShips[currentBattleShips.indexOf(attackingShip)].timesRolled = 0;
     } else {
+      console.log("Attacking with cannons");
       weapons = attackingShip.cannons;
     }
     if (weapons.length > 0) {
@@ -218,6 +224,7 @@
       for (_j = 0, _len2 = weapons.length; _j < _len2; _j++) {
         weapon = weapons[_j];
         roll = Math.floor(Math.random() * 6) + 1;
+        console.log("Roll: " + roll);
         targetShip = opponentShips[0];
         if (attackingShip.shipName === 'Ancient' || attackingShip.shipName === 'GCDS') {
           targetShip = _(opponentShips).multiSortBy(function(s) {
@@ -239,6 +246,7 @@
           }).value()[0];
         }
         if (roll !== 1 && (roll === 6 || roll + attackingShip.computerTotal - targetShip.shieldTotal >= 6)) {
+          console.log("Hit");
           targetShip.damage += weapon;
           if (targetShip.damage > targetShip.health) {
             _results.push(currentBattleShips.remove(targetShip));
@@ -260,6 +268,7 @@
     results[priority].attacker = 0;
     _results = [];
     for (i = 1; 1 <= numberOfSimulations ? i <= numberOfSimulations : i >= numberOfSimulations; 1 <= numberOfSimulations ? i++ : i--) {
+      console.log(" ======= NEW SIMULATION =======");
       currentBattleShips = [];
       for (_i = 0, _len = battleShips.length; _i < _len; _i++) {
         bShip = battleShips[_i];
@@ -272,6 +281,7 @@
           attackingShip = nextAttackingShip();
           shipAttackOpponent(attackingShip, priority);
           if (roundWon(priority)) {
+            console.log("Round Over, next simulation");
             break;
           } else {
             _results2.push(void 0);
@@ -332,6 +342,9 @@
       gPriority = finalGroupedPriorities[_k];
       simulatePriority(gPriority);
     }
+    console.log("Everything is done!");
+    console.log("RESULTS!");
+    console.log(results);
     return formatResults(results);
   };
 

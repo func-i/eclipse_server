@@ -1,0 +1,26 @@
+[
+    {
+        "race"       : "Terran",
+        "name"       : "Interceptor",
+        "initiative" : 2,
+        "computer"   : 0
+    },
+    {
+        "race"       : "Terran",
+        "name"       : "Cruiser",
+        "initiative" : 1,
+        "computer"   : 0
+    },
+    {
+        "race"       : "Terran",
+        "name"       : "Dreadnaught",
+        "initiative" : 0,
+        "computer"   : 0
+    },
+    {
+        "race"       : "Terran",
+        "name"       : "Starbase",
+        "initiative" : 4,
+        "computer"   : 0
+    }
+]

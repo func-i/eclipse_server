@@ -1,0 +1,49 @@
+[
+  {
+    "race": "Terran",
+    "name": "Interceptor",
+    "parts": [
+      "Ion Cannon",
+      "Nuclear Drive",
+      "Nuclear Source",
+      "Blank"
+    ]
+  },
+  {
+    "race": "Terran",
+    "name": "Cruiser",
+    "parts": [
+      "Ion Cannon",
+      "Electron Computer",
+      "Hull",
+      "Nuclear Drive",
+      "Nuclear Source",
+      "Blank"
+    ]
+  },
+  {
+    "race": "Terran",
+    "name": "Dreadnaught",
+    "parts": [
+      "Ion Cannon",
+      "Ion Cannon",
+      "Electron Computer",
+      "Hull",
+      "Hull",
+      "Nuclear Drive",
+      "Nuclear Source",
+      "Blank"
+    ]
+  },
+  {
+    "race": "Terran",
+    "name": "Starbase",
+    "parts": [
+      "Ion Cannon",
+      "Electron Computer",
+      "Hull",
+      "Hull",
+      "Blank"
+    ]
+  }
+]

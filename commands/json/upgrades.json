@@ -1,0 +1,186 @@
+[
+    {
+        "quantity"   : 1,
+        "power"      : 2,
+        "name"       : "Plasma Cannon",
+        "initiative" : 0,
+        "type"       : "cannon",
+        "value"      : 2
+    },
+    {
+        "quantity"   : 1,
+        "power"      : 1,
+        "name"       : "Phase Shield",
+        "initiative" : 0,
+        "type"       : "shield",
+        "value"      : 2
+    },
+    {
+        "quantity"   : 2,
+        "power"      : 0,
+        "name"       : "Plasma Missile",
+        "initiative" : 0,
+        "type"       : "missile",
+        "value"      : 2
+    },
+    {
+        "quantity"   : 1,
+        "power"      : 0,
+        "name"       : "Tachyon Source",
+        "initiative" : 0,
+        "type"       : "source",
+        "value"      : 9
+    },
+    {
+        "quantity"   : 1,
+        "power"      : 2,
+        "name"       : "Gluon Computer",
+        "initiative" : 2,
+        "type"       : "computer",
+        "value"      : 3
+    },
+    {
+        "quantity"   : 1,
+        "power"      : 0,
+        "name"       : "Gauss Shield",
+        "initiative" : 0,
+        "type"       : "shield",
+        "value"      : 1
+    },
+    {
+        "quantity"   : 2,
+        "power"      : 0,
+        "name"       : "Improved Hull",
+        "initiative" : 0,
+        "type"       : "hull",
+        "value"      : 1
+    },
+    {
+        "quantity"   : 1,
+        "power"      : 0,
+        "name"       : "Fusion Source",
+        "initiative" : 0,
+        "type"       : "source",
+        "value"      : 6
+    },
+    {
+        "quantity"   : 1,
+        "power"      : 1,
+        "name"       : "Positron Computer",
+        "initiative" : 1,
+        "type"       : "computer",
+        "value"      : 2
+    },
+    {
+        "quantity"   : 1,
+        "power"      : 4,
+        "name"       : "Antimatter Cannon",
+        "initiative" : 0,
+        "type"       : "cannon",
+        "value"      : 4
+    },
+    {
+        "quantity"   : 1,
+        "power"      : 2,
+        "name"       : "Fusion Drive",
+        "initiative" : 2,
+        "type"       : "drive",
+        "value"      : 2
+    },
+    {
+        "quantity"   : 2,
+        "power"      : 1,
+        "name"       : "Ion Turret",
+        "initiative" : 0,
+        "type"       : "cannon",
+        "value"      : 1
+    },
+    {
+        "quantity"   : 1,
+        "power"      : 0,
+        "name"       : "Axion Computer",
+        "initiative" : 0,
+        "type"       : "computer",
+        "value"      : 3
+    },
+    {
+        "quantity"   : 1,
+        "power"      : 2,
+        "name"       : "Flux Shield",
+        "initiative" : 0,
+        "type"       : "shield",
+        "value"      : 3
+    },
+    {
+        "quantity"   : 1,
+        "power"      : 3,
+        "name"       : "Tachyon Drive",
+        "initiative" : 3,
+        "type"       : "drive",
+        "value"      : 3
+    },
+    {
+        "quantity"   : 3,
+        "power"      : 0,
+        "name"       : "Shard Hull",
+        "initiative" : 0,
+        "type"       : "hull",
+        "value"      : 1
+    },
+    {
+        "quantity"   : 1,
+        "power"      : 0,
+        "name"       : "Hypergrid Source",
+        "initiative" : 0,
+        "type"       : "source",
+        "value"      : 11
+    },
+    {
+        "quantity"   : 1,
+        "power"      : 1,
+        "name"       : "Ion Cannon",
+        "initiative" : 0,
+        "type"       : "cannon",
+        "value"      : 1
+    },
+    {
+        "quantity"   : 1,
+        "power"      : 0,
+        "name"       : "Hull",
+        "initiative" : 0,
+        "type"       : "hull",
+        "value"      : 1
+    },
+    {
+        "quantity"   : 1,
+        "power"      : 0,
+        "name"       : "Electron Computer",
+        "initiative" : 0,
+        "type"       : "computer",
+        "value"      : 1
+    },
+    {
+        "quantity"   : 1,
+        "power"      : 1,
+        "name"       : "Nuclear Drive",
+        "initiative" : 1,
+        "type"       : "drive",
+        "value"      : 1
+    },
+    {
+        "quantity"   : 0,
+        "power"      : 0,
+        "name"       : "Blank",
+        "initiative" : 0,
+        "type"       : "",
+        "value"      : 0
+    },
+    {
+        "quantity"   : 1,
+        "power"      : 0,
+        "name"       : "Nuclear Source",
+        "initiative" : 0,
+        "type"       : "source",
+        "value"      : 3
+    }
+]
