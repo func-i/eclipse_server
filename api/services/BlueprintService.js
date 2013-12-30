@@ -1,4 +1,4 @@
-exports.get = function(callback) {
+exports.getShips = function(callback) {
   var blueprints = {};
 
   Ship.query(" \
@@ -25,7 +25,7 @@ exports.get = function(callback) {
         len = Object.keys(blueprints[ship.race][ship.ship_name]).length - 4 + 1;
 
         blueprints[ship.race][ship.ship_name][len] = {
-          upgradeName: ship.upgradeName,
+          upgradeName: ship.upgrade_name,
           type: ship.type,
           value: ship.value,
           quantity: ship.quantity,
@@ -37,3 +37,9 @@ exports.get = function(callback) {
       callback(blueprints);
   });
 };
+
+exports.getUpgrades = function(callback) {
+  Upgrade.find().sort("type").done(function(err, upgrades) {
+    callback(upgrades);
+  });
+}

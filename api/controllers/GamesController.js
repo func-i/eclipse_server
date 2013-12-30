@@ -21,7 +21,11 @@ module.exports = {
       if (err) {
         return console.log(err);
       } else {
-        res.json(game);
+        BlueprintService.getShips(function(blueprints) {
+          BlueprintService.getUpgrades(function(upgrades) {
+            res.json({game: game, blueprints: blueprints, upgrades: upgrades});
+          });
+        });
       }
     });
   },
@@ -36,8 +40,10 @@ module.exports = {
         game_id: game.id
       }).done(function(err, players) {
         if (err) return res.send(err,500);
-        BlueprintService.get(function(blueprints) {
-          res.json({game: game, players: players, blueprints: blueprints});
+        BlueprintService.getShips(function(blueprints) {
+          BlueprintService.getUpgrades(function(upgrades) {
+            res.json({game: game, players: players, blueprints: blueprints, upgrades: upgrades});
+          });
         });
       });
     });

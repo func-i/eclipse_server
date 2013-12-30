@@ -1,11 +1,17 @@
 module.exports = {
-  getBlueprints: function(done) {
-    BlueprintService.get(function(blueprint){
-      console.log(blueprint);
+  getShipBlueprints: function(done) {
+    BlueprintService.getShips(function(blueprints){
+      console.log(blueprints);
       done();
     });
   },
 
+  getUpgradeBlueprints: function(done) {
+    BlueprintService.getUpgrades(function(upgrades){
+      console.log(upgrades);
+      done();
+    });
+  },
 
   seed: function (done) {
     var self = this;
