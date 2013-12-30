@@ -16,8 +16,6 @@
  */
 
 module.exports = {
-
-
   /**
    * Action blueprints:
    *    `/simulations/create`

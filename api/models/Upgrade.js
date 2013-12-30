@@ -13,7 +13,8 @@ module.exports = {
     type: 'string',
     power: 'integer',
     value: 'integer',
-    quantity: 'integer'
+    quantity: 'integer',
+    initiative: 'integer'
   }
 
 };

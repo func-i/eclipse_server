@@ -36,7 +36,9 @@ module.exports = {
         game_id: game.id
       }).done(function(err, players) {
         if (err) return res.send(err,500);
-        res.json({game: game, players: players});
+        BlueprintService.get(function(blueprints) {
+          res.json({game: game, players: players, blueprints: blueprints});
+        });
       });
     });
   },

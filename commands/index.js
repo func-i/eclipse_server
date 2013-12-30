@@ -1,4 +1,12 @@
 module.exports = {
+  getBlueprints: function(done) {
+    BlueprintService.get(function(blueprint){
+      console.log(blueprint);
+      done();
+    });
+  },
+
+
   seed: function (done) {
     var self = this;
     self.seedShips(function() {
