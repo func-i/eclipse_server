@@ -9,7 +9,13 @@
 module.exports = {
 
   attributes: {
-  	uuid: 'string'
+  	uuid: 'string',
+
+    numberOfPlayers: function(cb) {
+      Player.find({game_id: this.id}).done(function(err, players) {
+        cb(players.length);
+      });
+    }
   },
 
   beforeCreate: function(values, cb) {
@@ -20,5 +26,8 @@ module.exports = {
     var random = Math.random().toString();
     values.uuid = crypto.createHash('sha1').update(current_date + random).digest('hex').slice(0, 5);
     cb();
-  }
+  },
+
+
+
 };

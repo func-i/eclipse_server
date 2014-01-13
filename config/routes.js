@@ -122,6 +122,10 @@ module.exports.routes = {
   'post /games/:game_id/simulations_test' : {
     controller    : 'simulations',
     action        : 'test'
+  },
+  'get /players/:player_id/games' : {
+    controller    : 'playergames',
+    action        : 'index'
   }
 };
 
