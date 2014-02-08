@@ -22,5 +22,155 @@
         "name"       : "Starbase",
         "initiative" : 4,
         "computer"   : 0
+    },
+
+
+
+    {
+        "race"       : "Planta",
+        "name"       : "Interceptor",
+        "initiative" : 0,
+        "computer"   : 1
+    },
+    {
+        "race"       : "Planta",
+        "name"       : "Cruiser",
+        "initiative" : 0,
+        "computer"   : 1
+    },
+    {
+        "race"       : "Planta",
+        "name"       : "Dreadnaught",
+        "initiative" : 0,
+        "computer"   : 1
+    },
+    {
+        "race"       : "Planta",
+        "name"       : "Starbase",
+        "initiative" : 2,
+        "computer"   : 1
+    },
+
+
+    {
+        "race"       : "Orion",
+        "name"       : "Interceptor",
+        "initiative" : 3,
+        "computer"   : 0
+    },
+    {
+        "race"       : "Orion",
+        "name"       : "Cruiser",
+        "initiative" : 2,
+        "computer"   : 0
+    },
+    {
+        "race"       : "Orion",
+        "name"       : "Dreadnaught",
+        "initiative" : 1,
+        "computer"   : 0
+    },
+    {
+        "race"       : "Orion",
+        "name"       : "Starbase",
+        "initiative" : 5,
+        "computer"   : 0
+    },
+
+
+
+
+
+
+
+    {
+        "race"       : "Hydran Protoss",
+        "name"       : "Interceptor",
+        "initiative" : 2,
+        "computer"   : 0
+    },
+    {
+        "race"       : "Hydran Protoss",
+        "name"       : "Cruiser",
+        "initiative" : 1,
+        "computer"   : 0
+    },
+    {
+        "race"       : "Hydran Protoss",
+        "name"       : "Dreadnaught",
+        "initiative" : 0,
+        "computer"   : 0
+    },
+    {
+        "race"       : "Hydran Protoss",
+        "name"       : "Starbase",
+        "initiative" : 4,
+        "computer"   : 0
+    },
+
+
+
+
+
+
+    {
+        "race"       : "Decendants of Draco",
+        "name"       : "Interceptor",
+        "initiative" : 2,
+        "computer"   : 0
+    },
+    {
+        "race"       : "Decendants of Draco",
+        "name"       : "Cruiser",
+        "initiative" : 1,
+        "computer"   : 0
+    },
+    {
+        "race"       : "Decendants of Draco",
+        "name"       : "Dreadnaught",
+        "initiative" : 0,
+        "computer"   : 0
+    },
+    {
+        "race"       : "Decendants of Draco",
+        "name"       : "Starbase",
+        "initiative" : 4,
+        "computer"   : 0
+    },
+
+
+
+
+
+
+    {
+        "race"       : "Mechanema",
+        "name"       : "Interceptor",
+        "initiative" : 2,
+        "computer"   : 0
+    },
+    {
+        "race"       : "Mechanema",
+        "name"       : "Cruiser",
+        "initiative" : 1,
+        "computer"   : 0
+    },
+    {
+        "race"       : "Mechanema",
+        "name"       : "Dreadnaught",
+        "initiative" : 0,
+        "computer"   : 0
+    },
+    {
+        "race"       : "Mechanema",
+        "name"       : "Starbase",
+        "initiative" : 4,
+        "computer"   : 0
     }
+
+
+
+
+
+
 ]

@@ -45,5 +45,278 @@
       "Hull",
       "Blank"
     ]
+  },
+
+
+
+
+
+
+  {
+    "race": "Planta",
+    "name": "Interceptor",
+    "parts": [
+      "Ion Cannon",
+      "Nuclear Drive",
+      "Nuclear Source"
+    ]
+  },
+  {
+    "race": "Planta",
+    "name": "Cruiser",
+    "parts": [
+     "Ion Cannon",
+      "Nuclear Drive",
+      "Nuclear Source",
+      "Hull",
+      "Blank"
+    ]
+  },
+  {
+    "race": "Planta",
+    "name": "Dreadnaught",
+    "parts": [
+      "Ion Cannon",
+      "Ion Cannon",
+      "Hull",
+      "Hull",
+      "Nuclear Drive",
+      "Nuclear Source",
+      "Blank"
+    ]
+  },
+  {
+    "race": "Planta",
+    "name": "Starbase",
+    "parts": [
+      "Ion Cannon",
+      "Electron Computer",
+      "Hull",
+      "Hull"
+    ]
+  },
+
+
+
+
+
+
+  {
+    "race": "Orion",
+    "name": "Interceptor",
+    "parts": [
+      "Ion Cannon",
+      "Nuclear Drive",
+      "Nuclear Source",
+      "Gauss Shield"
+    ]
+  },
+  {
+    "race": "Orion",
+    "name": "Cruiser",
+    "parts": [
+      "Ion Cannon",
+      "Electron Computer",
+      "Hull",
+      "Nuclear Drive",
+      "Nuclear Source",
+      "Gauss Shield"
+    ]
+  },
+  {
+    "race": "Orion",
+    "name": "Dreadnaught",
+    "parts": [
+      "Ion Cannon",
+      "Ion Cannon",
+      "Electron Computer",
+      "Hull",
+      "Hull",
+      "Nuclear Drive",
+      "Nuclear Source",
+      "Gauss Shield"
+    ]
+  },
+  {
+    "race": "Orion",
+    "name": "Starbase",
+    "parts": [
+      "Ion Cannon",
+      "Electron Computer",
+      "Hull",
+      "Hull",
+      "Gauss Shield"
+    ]
+  },
+
+
+
+
+
+
+
+
+  {
+    "race": "Hydran Protoss",
+    "name": "Interceptor",
+    "parts": [
+      "Ion Cannon",
+      "Nuclear Drive",
+      "Nuclear Source",
+      "Blank"
+    ]
+  },
+  {
+    "race": "Hydran Protoss",
+    "name": "Cruiser",
+    "parts": [
+      "Ion Cannon",
+      "Electron Computer",
+      "Hull",
+      "Nuclear Drive",
+      "Nuclear Source",
+      "Blank"
+    ]
+  },
+  {
+    "race": "Hydran Protoss",
+    "name": "Dreadnaught",
+    "parts": [
+      "Ion Cannon",
+      "Ion Cannon",
+      "Electron Computer",
+      "Hull",
+      "Hull",
+      "Nuclear Drive",
+      "Nuclear Source",
+      "Blank"
+    ]
+  },
+  {
+    "race": "Hydran Protoss",
+    "name": "Starbase",
+    "parts": [
+      "Ion Cannon",
+      "Electron Computer",
+      "Hull",
+      "Hull",
+      "Blank"
+    ]
+  },
+
+
+
+
+
+
+
+
+
+
+
+  {
+    "race": "Decendants of Draco",
+    "name": "Interceptor",
+    "parts": [
+      "Ion Cannon",
+      "Nuclear Drive",
+      "Nuclear Source",
+      "Blank"
+    ]
+  },
+  {
+    "race": "Decendants of Draco",
+    "name": "Cruiser",
+    "parts": [
+      "Ion Cannon",
+      "Electron Computer",
+      "Hull",
+      "Nuclear Drive",
+      "Nuclear Source",
+      "Blank"
+    ]
+  },
+  {
+    "race": "Decendants of Draco",
+    "name": "Dreadnaught",
+    "parts": [
+      "Ion Cannon",
+      "Ion Cannon",
+      "Electron Computer",
+      "Hull",
+      "Hull",
+      "Nuclear Drive",
+      "Nuclear Source",
+      "Blank"
+    ]
+  },
+  {
+    "race": "Decendants of Draco",
+    "name": "Starbase",
+    "parts": [
+      "Ion Cannon",
+      "Electron Computer",
+      "Hull",
+      "Hull",
+      "Blank"
+    ]
+  },
+
+
+
+
+
+
+
+
+
+  {
+    "race": "Mechanema",
+    "name": "Interceptor",
+    "parts": [
+      "Ion Cannon",
+      "Nuclear Drive",
+      "Nuclear Source",
+      "Blank"
+    ]
+  },
+  {
+    "race": "Mechanema",
+    "name": "Cruiser",
+    "parts": [
+      "Ion Cannon",
+      "Electron Computer",
+      "Hull",
+      "Nuclear Drive",
+      "Nuclear Source",
+      "Blank"
+    ]
+  },
+  {
+    "race": "Mechanema",
+    "name": "Dreadnaught",
+    "parts": [
+      "Ion Cannon",
+      "Ion Cannon",
+      "Electron Computer",
+      "Hull",
+      "Hull",
+      "Nuclear Drive",
+      "Nuclear Source",
+      "Blank"
+    ]
+  },
+  {
+    "race": "Mechanema",
+    "name": "Starbase",
+    "parts": [
+      "Ion Cannon",
+      "Electron Computer",
+      "Hull",
+      "Hull",
+      "Blank"
+    ]
   }
+
+
 ]
