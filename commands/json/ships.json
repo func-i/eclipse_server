@@ -53,27 +53,56 @@
 
 
     {
-        "race"       : "Orion",
+        "race"       : "Orion Hegemony",
         "name"       : "Interceptor",
         "initiative" : 3,
         "computer"   : 0
     },
     {
-        "race"       : "Orion",
+        "race"       : "Orion Hegemony",
         "name"       : "Cruiser",
         "initiative" : 2,
         "computer"   : 0
     },
     {
-        "race"       : "Orion",
+        "race"       : "Orion Hegemony",
         "name"       : "Dreadnaught",
         "initiative" : 1,
         "computer"   : 0
     },
     {
-        "race"       : "Orion",
+        "race"       : "Orion Hegemony",
         "name"       : "Starbase",
         "initiative" : 5,
+        "computer"   : 0
+    },
+
+
+
+
+
+    {
+        "race"       : "Eridani",
+        "name"       : "Interceptor",
+        "initiative" : 2,
+        "computer"   : 0
+    },
+    {
+        "race"       : "Eridani",
+        "name"       : "Cruiser",
+        "initiative" : 1,
+        "computer"   : 0
+    },
+    {
+        "race"       : "Eridani",
+        "name"       : "Dreadnaught",
+        "initiative" : 0,
+        "computer"   : 0
+    },
+    {
+        "race"       : "Eridani",
+        "name"       : "Starbase",
+        "initiative" : 4,
         "computer"   : 0
     },
 

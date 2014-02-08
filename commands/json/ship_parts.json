@@ -102,7 +102,7 @@
 
 
   {
-    "race": "Orion",
+    "race": "Orion Hegemony",
     "name": "Interceptor",
     "parts": [
       "Ion Cannon",
@@ -112,7 +112,7 @@
     ]
   },
   {
-    "race": "Orion",
+    "race": "Orion Hegemony",
     "name": "Cruiser",
     "parts": [
       "Ion Cannon",
@@ -124,7 +124,7 @@
     ]
   },
   {
-    "race": "Orion",
+    "race": "Orion Hegemony",
     "name": "Dreadnaught",
     "parts": [
       "Ion Cannon",
@@ -138,7 +138,7 @@
     ]
   },
   {
-    "race": "Orion",
+    "race": "Orion Hegemony",
     "name": "Starbase",
     "parts": [
       "Ion Cannon",
@@ -146,6 +146,59 @@
       "Hull",
       "Hull",
       "Gauss Shield"
+    ]
+  },
+
+
+
+
+
+
+   {
+    "race": "Eridani",
+    "name": "Interceptor",
+    "parts": [
+      "Ion Cannon",
+      "Nuclear Drive",
+      "Nuclear Source",
+      "Blank"
+    ]
+  },
+  {
+    "race": "Eridani",
+    "name": "Cruiser",
+    "parts": [
+      "Ion Cannon",
+      "Electron Computer",
+      "Hull",
+      "Nuclear Drive",
+      "Nuclear Source",
+      "Blank"
+    ]
+  },
+  {
+    "race": "Eridani",
+    "name": "Dreadnaught",
+    "parts": [
+      "Ion Cannon",
+      "Ion Cannon",
+      "Electron Computer",
+      "Hull",
+      "Hull",
+      "Nuclear Drive",
+      "Nuclear Source",
+      "Blank"
+    ]
+  },
+  {
+    "race": "Eridani",
+    "name": "Starbase",
+    "parts": [
+      "Ion Cannon",
+      "Electron Computer",
+      "Hull",
+      "Hull",
+      "Blank"
     ]
   },
 
