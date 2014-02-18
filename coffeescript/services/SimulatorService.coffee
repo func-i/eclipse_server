@@ -48,7 +48,7 @@ addPlayerShipsToBattle = (playerType, shipName) ->
 
   }
 
-  #console.log battleObject
+  console.log battleObject
   # Load the player blueprint for this ship
   playerShipBluePrint = battleObject[playerType].player.ships[shipName]
 
@@ -95,11 +95,11 @@ roundWon = (priority) ->
     s.playerType is 'attacker'
 
   if defenderShips.length is 0
-    #console.log "Attacker wins the hex"
+    console.log "Attacker wins the hex"
     results[priority].attacker += 1
     return true
   else if attackerShips.length is 0
-    #console.log "Defender wins the hex"
+    console.log "Defender wins the hex"
     results[priority].defender += 1
     return true
   else
@@ -107,7 +107,7 @@ roundWon = (priority) ->
 
 nextAttackingShip = () ->
   s = _(currentBattleShips).multiSortBy (s) -> [s.timesRolled, !(s.missiles.length>0), -s.initiativeTotal, -(s.missiles.length), (if s.playerType is 'defender' then 0 else 1)]
-  #console.log("Next attacking ship", s.value()[0]);
+  console.log("Next attacking ship", s.value()[0]);
   s.value()[0]
 
 shipAttackOpponent = (attackingShip, priority) ->
@@ -134,7 +134,7 @@ shipAttackOpponent = (attackingShip, priority) ->
     [attackingShipPriority.indexOf(oS.shipName), oS.health - oS.damage]).value()
 
   if attackingShip.missiles.length > 0
-    #console.log "Attacking with Missiles"
+    console.log "Attacking with Missiles"
     # This ship still has missles and hasn't fired them
     # Fire them now!
     weapons = attackingShip.missiles
@@ -143,7 +143,7 @@ shipAttackOpponent = (attackingShip, priority) ->
     currentBattleShips[currentBattleShips.indexOf(attackingShip)].missiles = []
     currentBattleShips[currentBattleShips.indexOf(attackingShip)].timesRolled = 0
   else
-    #console.log "Attacking with cannons"
+    console.log "Attacking with cannons"
     # This ship only has cannons to fire
     # Fire them now
     weapons = attackingShip.cannons
@@ -152,7 +152,7 @@ shipAttackOpponent = (attackingShip, priority) ->
     # There are weapons to fire!
      for weapon in weapons
       roll = Math.floor(Math.random() * 6) + 1
-      #console.log "Roll: #{roll}"
+      console.log "Roll: #{roll}"
 
       # Find the next ship to attack
       targetShip = opponentShips[0]
@@ -174,7 +174,7 @@ shipAttackOpponent = (attackingShip, priority) ->
 
       # PVP, use priority ship selected
       if roll isnt 1 && (roll is 6 || roll + attackingShip.computerTotal - targetShip.shieldTotal >= 6)
-        #console.log "Hit"
+        console.log "Hit"
 
         # Apply damage to ship
         targetShip.damage += weapon
@@ -191,7 +191,7 @@ simulatePriority = (priority) ->
 
   # simulate the battle for this priority 10 times
   for i in [1..numberOfSimulations]
-    #console.log " ======= NEW SIMULATION ======="
+    console.log " ======= NEW SIMULATION ======="
 
     # Reset all attributes
     currentBattleShips = []
@@ -207,7 +207,7 @@ simulatePriority = (priority) ->
       shipAttackOpponent(attackingShip, priority)
       if roundWon(priority)
         # Reload the ships each time we test this case
-        #console.log "Round Over, next simulation"
+        console.log "Round Over, next simulation"
         break
 
 formatResults = (results) ->
@@ -256,9 +256,9 @@ start = () ->
   for gPriority in finalGroupedPriorities
     simulatePriority(gPriority)
 
-  #console.log "Everything is done!"
-  #console.log "RESULTS!"
-  #console.log results
+  console.log "Everything is done!"
+  console.log "RESULTS!"
+  console.log results
   return formatResults(results)
 
 arrayExcept = (arr, idx) ->
